@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1675693717">
   <File Type="RBD_FILE" Name="half_adder.rbd"/>
   <File Type="NPI_FILE" Name="half_adder.npi"/>
   <File Type="RNPI_FILE" Name="half_adder.rnpi"/>
@@ -37,15 +36,7 @@
   <File Type="ROUTE-TIMING-PB" Name="half_adder_timing_summary_routed.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/OR_GATE.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <Config>
-      <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="OR_GATE"/>
+
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
