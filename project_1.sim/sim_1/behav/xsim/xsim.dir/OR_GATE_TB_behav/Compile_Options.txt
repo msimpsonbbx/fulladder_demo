@@ -1,0 +1,1 @@
+-wto "305bed98e22e47a5931f287552e65f70" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "OR_GATE_TB_behav" "xil_defaultlib.OR_GATE_TB" -log "elaborate.log" 
