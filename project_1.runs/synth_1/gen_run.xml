@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1675702681">
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1675703633">
   <File Type="RDS-DCP" Name="half_adder.dcp"/>
   <File Type="PA-TCL" Name="half_adder.tcl"/>
   <File Type="REPORTS-TCL" Name="half_adder_reports.tcl"/>
@@ -24,6 +24,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fulladder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/OR_GATE.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -33,7 +39,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="half_adder"/>
+      <Option Name="TopModule" Val="FULL_ADDER"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
