@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 -- Import the half adder and AND gate modules
-use work.half_adder.all;
+use work.half_adder;
 
 entity half_adder_tb is
 end half_adder_tb;

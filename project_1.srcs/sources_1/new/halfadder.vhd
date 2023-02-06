@@ -1,9 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Import the AND and XOR gate modules
-use work.AND_GATE.all;
-use work.XOR_GATE.all;
+
 
 entity half_adder is
     Port ( a : in  STD_LOGIC;
@@ -12,8 +10,14 @@ entity half_adder is
            carry : out  STD_LOGIC);
 end half_adder;
 
+
+
 architecture Behavioral of half_adder is
+
 begin
-    sum <= XOR_GATE(a,b);
-    carry <= AND_GATE(a,b);
-end Behavioral;
+--instantiate and do port map for the first half adder.
+XOR_GATE : entity work.XOR_GATE port map(a,b,sum);
+--instantiate and do port map for the second half adder.
+AND_GATE : entity work.AND_GATE port map(a,b,carry);
+
+end;
