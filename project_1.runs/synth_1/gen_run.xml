@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1675687363">
-  <File Type="RDS-DCP" Name="half_adder.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1675768657">
   <File Type="PA-TCL" Name="half_adder.tcl"/>
   <File Type="REPORTS-TCL" Name="half_adder_reports.tcl"/>
   <File Type="RDS-RDS" Name="half_adder.vds"/>
+  <File Type="RDS-DCP" Name="half_adder.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/AND_GATE.vhd">
