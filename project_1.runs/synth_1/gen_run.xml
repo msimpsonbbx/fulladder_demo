@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1675693717">
   <File Type="RDS-DCP" Name="half_adder.dcp"/>
   <File Type="PA-TCL" Name="half_adder.tcl"/>
   <File Type="REPORTS-TCL" Name="half_adder_reports.tcl"/>
   <File Type="RDS-RDS" Name="half_adder.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/OR_GATE.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <Config>
-      <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="OR_GATE"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
