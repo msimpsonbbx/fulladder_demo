@@ -1,0 +1,30 @@
+runners:
+ AWS-runner:
+  image: work1-virtualbox:5000/ubuntu-vivado-2020-1:latest
+
+jobs:
+ build_run_sim:
+  resource_spec: small
+  runner: AWS-runner
+  type:
+   build: hardware
+  current_working_directory: /tools/Xilinx/Vivado/2020.1/workspace/project_1
+  output:
+   artifact:
+    - ./project_1.xpr
+    - ./project_1.cache
+    - ./project_1.hw
+    - ./project_1.ip_user_files
+    - ./project_1.sim
+    - ./project_1.srcs
+  steps:
+   - run:
+      name: Run tcl
+      command: |
+       source /tools/Xilinx/Vivado/2020.1/settings64.sh
+       vivado -mode tcl -source sim.tcl
+      type: miscellaneous
+workflows:
+ complete-build-test:
+  jobs:
+   - build_run_sim
