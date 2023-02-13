@@ -70,6 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param chipscope.maxJobs 1
+set_param power.BramSDPPropagationFix 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu7ev-ffvc1156-2-e
 
@@ -85,7 +90,11 @@ set_property ip_output_repo /tools/Xilinx/Vivado/2020.1/workspace/project_1/proj
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /tools/Xilinx/Vivado/2020.1/workspace/project_1/project_1.srcs/sources_1/new/half_adder.vhd
+read_vhdl -library xil_defaultlib {
+  /tools/Xilinx/Vivado/2020.1/workspace/project_1/project_1.srcs/sources_1/new/AND_GATE.vhd
+  /tools/Xilinx/Vivado/2020.1/workspace/project_1/project_1.srcs/sources_1/new/XOR_GATE.vhd
+  /tools/Xilinx/Vivado/2020.1/workspace/project_1/project_1.srcs/sources_1/new/halfadder.vhd
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -95,6 +104,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /tools/Xilinx/Vivado/2020.1/workspace/project_1/project_1.srcs/constrs_1/new/consttaints.xdc
+set_property used_in_implementation false [get_files /tools/Xilinx/Vivado/2020.1/workspace/project_1/project_1.srcs/constrs_1/new/consttaints.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
