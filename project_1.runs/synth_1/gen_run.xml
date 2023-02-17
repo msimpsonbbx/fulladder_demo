@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1676283093">
-  <File Type="RDS-DCP" Name="half_adder.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="half_adder_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="half_adder.tcl"/>
-  <File Type="RDS-UTIL" Name="half_adder_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="half_adder_reports.tcl"/>
-  <File Type="RDS-RDS" Name="half_adder.vds"/>
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1676651034">
+  <File Type="VDS-TIMINGSUMMARY" Name="FULL_ADDER_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="FULL_ADDER.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="FULL_ADDER_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="FULL_ADDER_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="FULL_ADDER_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="FULL_ADDER.vds"/>
+  <File Type="REPORTS-TCL" Name="FULL_ADDER_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="FULL_ADDER_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="FULL_ADDER.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/AND_GATE.vhd">
