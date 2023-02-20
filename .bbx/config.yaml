@@ -71,3 +71,4 @@ workflows:
   jobs:
    - build_run_sim
    - build_run_synth
+   - build_run_impl
