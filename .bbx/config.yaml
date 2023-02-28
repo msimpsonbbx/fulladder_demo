@@ -1,6 +1,6 @@
 runners:
  AWS-runner:
-  image: work1-virtualbox:5000/ubuntu-vivado-2020-1:latest
+  image: 192.168.91.202:5000/ubuntu-vivado-2020-1
 
 jobs:
  build_run_sim:
