@@ -46,7 +46,7 @@ jobs:
        vivado -mode tcl -source synth.tcl
       type: miscellaneous
  build_run_impl:
-  resource_spec: xlarge
+  resource_spec: medium
   runner: AWS-runner
   depends:
    - build_run_sim
