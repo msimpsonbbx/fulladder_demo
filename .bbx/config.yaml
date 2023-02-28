@@ -46,8 +46,11 @@ jobs:
        vivado -mode tcl -source synth.tcl
       type: miscellaneous
  build_run_impl:
-  resource_spec: small
+  resource_spec: xlarge
   runner: AWS-runner
+  depends:
+   - build_run_sim
+   - build_run_synth
   type:
    build: hardware
   current_working_directory: /tools/Xilinx/Vivado/2020.1/workspace/project_1
